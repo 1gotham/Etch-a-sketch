@@ -1,8 +1,14 @@
 let gridCont = document.getElementById("gridCont");
-let isDrawing = false
+let isDrawing = false;
 let selectOption = document.getElementById("size");
-let size = 16
-let colorInput = document.getElementById("colorInput")
+let size = 16;
+let colorInput = document.getElementById("colorInput");
+let erase = false;
+const drawingCont = document.getElementById("drawing");
+
+drawingCont.addEventListener("dragstart", (event) => {
+    event.preventDefault();
+});
 
 function gridDimensions(box, size) {
     x = Math.floor(640 / size);
@@ -45,7 +51,12 @@ function draw() {
 
     allBoxes.forEach(function(box, index) {
         box.addEventListener('click', function () {
-            box.style.backgroundColor = colorInput.value;
+            if (!erase) {
+                box.style.backgroundColor = colorInput.value;
+            }
+            else {
+                box.style.backgroundColor = "#f1b26a";
+            }
         });
         box.addEventListener('mousedown', startDrawing);
         box.addEventListener('mouseup', stopDrawing);
@@ -60,12 +71,29 @@ const startDrawing = (event) => {
 
 const drawing = (event) => {
     if (!isDrawing) return
-    event.target.style.backgroundColor = colorInput.value;
-    console.log(event.target.index)
+    
+    if (!erase) {
+        event.target.style.backgroundColor = colorInput.value;
+    }
+    else {
+        event.target.style.backgroundColor = "#f1b26a";
+    }
 }
 
 const stopDrawing = () => {
     isDrawing = false
+}
+
+function eraser() {
+    if (erase == false) {
+        erase = true;
+        document.body.style.cursor = `url('assets/eraser.png'), auto`;
+        // document.body.style.cursor = "pointer";
+    }
+    else {
+        erase = false;
+        document.body.style.cursor = "default";
+    }
 }
 
 createGrid()
