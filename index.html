@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Etch-a-sketch</title>
+</head>
+<body>
+    <h1>Draw!</h1>
+    <div class="drawing">
+        <div id="gridCont" class="grid-container">
+
+        </div>
+        <div class="options">
+            <p>Select size of the grid!</p>
+            <select onchange="changeGrid()" name="sizes" id="size">
+                <option value="1">16x16</option>
+                <option value="2">32x32</option>
+                <option value="3">64x64</option>
+            </select>
+            <input id ="colorInput" type="color">
+        </div>
+    </div>
+
+
+</body>
+
+<script src="app.js"></script>
+</html>
