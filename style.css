@@ -12,11 +12,25 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #fab76d;
+    background-image: linear-gradient(to bottom right, #ffad56, #fdecb0);
+    background-size: auto;
+    height: 100vh;
+    background-repeat:   no-repeat;
 }
 
-h1, p {
+p {
+    color: #634a2a;
+    text-transform: uppercase;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+h1 {
     color: #fdecb0;
+    font-size: 3.5vw;
+    text-shadow: 5px 5px 2px #99722b;
+    font-weight: 900;
+    font-style: italic;
 }
 
 .grid-container {
@@ -40,4 +54,43 @@ h1, p {
 
 .options {
     margin: 25px;
+
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select {
+    background-color: #634a2a;
+    color: #fdecb0;
+    font-weight: 700;
+    width: 7vw;
+    height: 5vh;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.select:hover {
+    background-color: #8d6736;
+}
+
+.color-input {
+    width: 2vw;
+    height: 5vh;
+    background-color: #634a2a;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.color-input:hover {
+    background-color: #8d6736;
 }
