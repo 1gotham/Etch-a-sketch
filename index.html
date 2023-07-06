@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Draw!</h1>
-    <div class="drawing">
+    <div id="drawing" class="drawing">
         <div id="gridCont" class="grid-container">
 
         </div>
@@ -21,9 +21,19 @@
                     <option value="3">64x64</option>
                 </select>
                 <input class="color-input" id ="colorInput" type="color">
+                <div class="delete">
+                    <img onclick="changeGrid()" class="trash" src="assets/trash-bin-svgrepo-com.svg" alt="Image of trash bin symbolizing button to clear the grid">
+                </div>
+                <div class="erase">
+                    <img onclick="eraser()" class="eraser" src="assets/eraser-svgrepo-com.svg" alt="Image of eraser which is button for eraser.">
+                </div>
             </div>
         </div>
     </div>
+
+    <footer>
+        <p>Work of 1gotham! 2023</p>
+    </footer>
 
 
 </body>
