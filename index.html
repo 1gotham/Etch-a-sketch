@@ -14,12 +14,14 @@
         </div>
         <div class="options">
             <p>Select size of the grid!</p>
-            <select onchange="changeGrid()" name="sizes" id="size">
-                <option value="1">16x16</option>
-                <option value="2">32x32</option>
-                <option value="3">64x64</option>
-            </select>
-            <input id ="colorInput" type="color">
+            <div class="inputs">
+                <select class="select" onchange="changeGrid()" name="sizes" id="size">
+                    <option value="1">16x16</option>
+                    <option value="2">32x32</option>
+                    <option value="3">64x64</option>
+                </select>
+                <input class="color-input" id ="colorInput" type="color">
+            </div>
         </div>
     </div>
 
