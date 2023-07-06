@@ -94,3 +94,35 @@ h1 {
 .color-input:hover {
     background-color: #8d6736;
 }
+
+.trash, .eraser {
+    width: 4vh;
+    height: 4vh;
+    filter: invert(0.5) sepia(0.5) saturate(5) hue-rotate(0deg);
+    transition: 0.5s;
+    margin-left: 10px;
+}
+
+.trash:hover, .eraser:hover {
+    filter: invert(0.5) sepia(1) saturate(3) hue-rotate(0deg);
+}
+
+.eraser-cursor {
+    cursor: url('assets/eraser-svgrepo-com.svg'), auto;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #634a2a;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    color: white;
+    margin: 10px;
+}
